@@ -1,0 +1,233 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FARBSCHEMA */
+:root {
+  --bg-main: #0f1115;
+  --bg-section: #161a22;
+  --bg-card: #1e2430;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --accent: #9ca3af;
+  --accent-strong: #d1d5db;
+}
+
+/* BASE */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #0f1115, #161a22);
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2.2rem;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.6rem;
+  background: var(--accent-strong);
+  color: #0f1115;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent-strong);
+}
+
+.btn-outline:hover {
+  background: var(--bg-card);
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.02);
+}
+
+/* SECTIONS */
+.section {
+  padding: 4.5rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-dark {
+  background: var(--bg-section);
+}
+
+.section h2 {
+  margin-bottom: 1.6rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skills span {
+  background: var(--bg-card);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+footer a {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+/* TYPEWRITER FIX */
+.typewriter-wrapper {
+  min-height: 3.6em;
+  display: flex;
+  align-items: flex-start;
+}
+
+#typewriter {
+  display: inline-block;
+  white-space: pre-line;
+  color: var(--accent-strong);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin-top: 1.5rem;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: var(--text-strong, #ffffff);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-strong);
+  outline: none;
+  background-color: #1e2430;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 0.7rem 1.6rem;
+  background: var(--accent-strong);
+  color: #0f1115;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
